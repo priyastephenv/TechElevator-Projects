@@ -1,0 +1,99 @@
+* {
+  padding: 3px;
+}
+
+body > main.container {
+  border: solid red 3px;
+  margin: 3px;
+  height: 60vh;
+  display: grid;
+
+  /* DEMO justify-content and align-content
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px 100px 50px 100px;
+  */
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 2fr;
+  grid-template-areas:
+    "one   one  two"
+    "three four ."
+    "five  six  seven"
+    "five  six  seven";
+  /*   row column */
+  gap: 5px 1px;
+  /* align-items: center;
+  justify-items: center; */
+}
+
+/* This selects the first main with a class called 'containter'
+main.container:first-child{
+
+}
+*/
+main.container > section:first-child {
+  grid-area: one;
+}
+main.container > section:nth-child(2) {
+  grid-area: two;
+}
+main.container > section:nth-child(3) {
+  grid-area: three;
+}
+main.container > section:nth-child(4) {
+  grid-area: four;
+}
+main.container > section:nth-child(5) {
+  grid-area: five;
+}
+main.container > section:nth-child(6) {
+  grid-area: six;
+}
+main.container > section:nth-child(7) {
+  grid-area: seven;
+}
+
+main.container > section {
+  border: solid blue 3px;
+  margin: 3px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 520px) {
+  body > main.container {
+    border: solid red 3px;
+    margin: 3px;
+    height: 60vh;
+    display: grid;
+  
+    /* DEMO justify-content and align-content
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 100px 50px 100px;
+    */
+  
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six"
+      "seven";
+
+    /*   row column */
+    gap: 5px 1px;
+    /* align-items: center;
+    justify-items: center; */
+  }
+
+  section:last-child > img {
+    display: none;
+  }
+
+}

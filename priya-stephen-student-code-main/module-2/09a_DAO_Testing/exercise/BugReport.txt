@@ -1,0 +1,48 @@
+Bug 1
+-----
+Test that demonstrates problem: updated_timesheet_has_expected_values_when_retrieved
+
+Expected output: billable = true
+
+Actual output: billable = false
+
+How did you fix this bug?
+Billable variable was not included for update in method. Variable was added.
+
+Bug 2
+-----
+Test that demonstrates problem: getTimesheetsByProjectId_returns_list_of_all_timesheets_for_project
+
+Expected output: list size 3
+
+Actual output: list size 2
+
+How did you fix this bug?
+In the WHERE statement, employee_id was the variable when it should have been project_id. It was changed to project_id.
+
+Bug 3
+-----
+Test that demonstrates problem: getBillableHours_returns_correct_total
+
+Expected output: 0.0
+
+Actual output: 2.0
+
+How did you fix this bug?
+
+ Add 'AND billable = true' to SQL statement so that only billable hours would be included in the sum.
+
+
+Bug 4
+-----
+Test that demonstrates problem: getTimesheetsByEmployeeId_returns_list_of_all_timesheets_for_employee
+
+Expected output: List size 2
+
+Actual output:List size 1
+
+How did you fix this bug?
+
+There was an if statement where there should have been a while statment. It was changed so that all results would
+be included in the list.
+

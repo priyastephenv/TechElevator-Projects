@@ -1,0 +1,39 @@
+Document the bugs you found, in this format:
+
+1. [Class where bug was found]
+[Description of bug]
+[What you did to fix it and get your tests to pass]
+
+---------------------------------------------------
+
+
+1. Animal Group Name
+Description: The test is case-sensitive when it should work regardless of case.
+Fix: Because the test already worked with the animal name in all lowercase, I chose to start from there. I made
+a new variable that would change the String input into all lowercase and then compare the results.
+
+
+2. Cigar Party
+Description: The test case did not include 40 and 60 cigars.
+Fix: The less than and greater than signs were changed to less than or equal to and greater than or equal to.
+
+3. Front Times
+Description: The number of times the front is repeating is one less that the integer given.
+Fix: Fix the n to be <n instead of < n-1 for the loops.
+
+
+4. Less 20
+Description: Does not account for 1 or 2 less than 20.
+Fix: The variable used for testing was this.n and it was not set to equal the n which we actually wanted to test.
+Fixed it by making this.n = n.
+
+5. Lucky 13
+Description: The test is returning false for arrays that do not have a 1 or a 3.
+Fix: The test was using an AssertFalse for a scenario that was supposed to return true. So it kept failing. It was
+changed to AssertTrue.
+
+6. Word Count
+
+Description: It is not counting the words that are duplicated.
+Fix: The Word Count class was checking for values when it should have been testing for keys. I changed containsValue
+to containsKey.

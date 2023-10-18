@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87CEEB;
+}
+
+
+#mid-section{
+    display: flex;
+    padding: 10px 80px;
+    flex-direction: row;
+}
+
+header img {
+    height: 100px;
+    width: auto;
+}
+header h1 {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+main img {
+    object-fit: cover;
+    margin-right: 20px;
+    height: 350px;
+    width: 35%;
+}
+
+main li:before {
+    content: '🍡';
+    margin-left: -31px;
+    padding-right: 8px;
+}
+
+main, section, footer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+
+.store-button { /* used for store link in "Get refreshed" section */
+    width: 15%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+#bottom-section {
+    display: flex;
+    background-color: #87CEEB;
+    border: #87CEEB;
+}
+
+main{
+    background-color: #87CEEB;
+}
+
+#fred > h1,
+#fred > p{
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+#store {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+footer{
+    padding: 15px 5px;
+}
+
+#fred {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#fred > img{
+    height: 100px;
+    width: auto;
+    padding-top: 50px;
+}
+
+#mid-section {
+    display: flex;
+    flex-direction: row;
+}
+
+#facts {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-grow:1;
+}
+
+header {
+    display: flex;
+    flex-grow: 1;
+}
+
+#header-selectors :nth-child(1){
+    order: 3;
+}
+
+#header-selectors :nth-child(2){
+
+    order: 2;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+    
+}
+
+
+
+button:hover{
+    color: white;
+}
+
+
+
+main{
+    background-color: white;
+}
+
+.text-area{
+    height: 100px;
+    width: 35%;
+}
+
+main > div {
+    margin: 20px;
+}
+
+.color {
+    width: 25%;
+}
+
+#button-contact {
+    color: white;
+}
+
+#contact-h1{
+    font-weight: bold;
+    margin: 20px
+}
+
+#contact-footer {
+    padding: 15px 5px;
+}
+
+.contact-main {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px){
+    
+header{
+    display: grid;   
+    grid-template-columns: repeat(6 1fr);
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: 
+    
+    "popsicle    popheader  popheader   popheader   popheader   popheader"
+    "popnav      popnav     popnav      popnav      popnav      popnav";
+}
+
+header > h1{
+    grid-area: popheader;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    grid-area: popnav;
+    justify-content: space-evenly;
+}
+
+header > nav button{
+    flex-grow: 1;
+}
+
+header > img {
+    grid-area: popsicle;
+}
+
+#facts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: 
+    "factImg"
+    "didYouKnow"
+    "dykList";
+}
+
+#facts > img{
+    width: auto;
+    height: 200px;
+    grid-area: factImg;
+}
+
+#facts > h1{
+    grid-area: didYouKnow;
+    text-align: center;
+}
+
+#facts > ul{
+    grid-area: dykList;
+}
+
+#fred {
+    display: grid;
+    height: 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: 
+    "fredImg   fredHead"
+    "fredP    fredP"
+}
+
+#fred > img {
+    grid-area: fredImg;
+    justify-self: center;
+}
+
+#fred h1{
+    grid-area: fredHead;
+}
+
+#fred p {
+    grid-area: fredP;
+}
+
+#bottom-section{
+    display: grid;
+    row-gap: 10px;
+}
+
+.contact-main *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+} 

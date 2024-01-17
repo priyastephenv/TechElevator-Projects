@@ -52,7 +52,7 @@ public class Product {
 
              final int quantityRemaining = 5;
 
-            Scanner scanner = new Scanner(new File("C:\\Users\\Student\\workspace\\java-orange-minicapstonemodule1-team0\\main.csv"));
+            Scanner scanner = new Scanner(new File("main.csv"));
 
             String text;
 
